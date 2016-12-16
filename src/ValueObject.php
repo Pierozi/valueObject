@@ -27,4 +27,11 @@ abstract class ValueObject
     {
         throw new \Exception('In ValueObject you are not allowed to setup property');
     }
+
+    /**
+     * Compare left and right if they are equal
+     * @param $left
+     * @param $right
+     */
+    abstract public function equal($left, $right);
 }
