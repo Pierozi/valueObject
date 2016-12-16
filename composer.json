@@ -20,6 +20,6 @@
         "psy/psysh": "@stable"
     },
     "autoload": {
-        "psr-4": {"Plab\ValueObject\\": "src"}
+        "psr-4": {"Plab\\ValueObject\\": "src"}
     }
 }
