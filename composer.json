@@ -1,0 +1,25 @@
+{
+    "name": "plab/valueObject",
+    "description": "A PHP library of classes for immutability object compound",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Pierre Tomasina"
+        },
+        {
+            "name": "Contributors",
+            "homepage": "https://github.com/Pierozi/valueObject/graphs/contributors"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "require-dev": {
+        "atoum/atoum": "^2.8",
+        "atoum/stubs": "^2.5",
+        "psy/psysh": "@stable"
+    },
+    "autoload": {
+        "psr-4": {"Plab\ValueObject\\": "src"}
+    }
+}
