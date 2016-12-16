@@ -1,5 +1,6 @@
 {
-    "name": "plab/valueObject",
+    "name": "plab/value-object",
+    "type": "library",
     "description": "A PHP library of classes for immutability object compound",
     "license": "GPL-3.0",
     "authors": [
