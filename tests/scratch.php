@@ -1,6 +1,6 @@
 <?php
 
-require dirname(__DIR__) . '/vendor/autoload.php';
+require dirname(__DIR__).'/vendor/autoload.php';
 
 $meter = new \Plab\ValueObject\Measure\Length('meter', 1);
 $cm100 = new \Plab\ValueObject\Measure\Length('centimeter', 100);

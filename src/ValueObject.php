@@ -1,15 +1,11 @@
 <?php
 /**
- * Plab\ValueObject
+ * Plab\ValueObject.
  */
 namespace Plab\ValueObject;
+
 /**
- * Interface \Plab\ValueObject.
- *
- * Abstract class with Immutable access to avoid miss usage.
- *
- * @copyright  Copyright © 2017
- * @license    GPL-3.0
+ * Class ValueObject.
  */
 abstract class ValueObject
 {
@@ -17,7 +13,9 @@ abstract class ValueObject
      * Getter of instance properties.
      *
      * @param string $key
+     *
      * @return mixed
+     *
      * @throws \Exception
      */
     public function __get(string $key)
@@ -34,6 +32,7 @@ abstract class ValueObject
      *
      * @param $key
      * @param $value
+     *
      * @throws \Exception
      */
     public function __set($key, $value)

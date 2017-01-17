@@ -5,6 +5,9 @@ namespace Plab\ValueObject\Measure\Length;
 use Plab\ValueObject\Measure\Length;
 use Plab\ValueObject\ValueObject;
 
+/**
+ * Class Meter.
+ */
 final class Meter extends ValueObject
 {
     /**
@@ -14,6 +17,7 @@ final class Meter extends ValueObject
 
     /**
      * Meter constructor.
+     *
      * @param int $value
      */
     public function __construct(int $value)
@@ -26,6 +30,7 @@ final class Meter extends ValueObject
      *
      * @param ValueObject $left
      * @param ValueObject $right
+     *
      * @return bool
      */
     public function equal(ValueObject $left, ValueObject $right) : bool
@@ -37,6 +42,7 @@ final class Meter extends ValueObject
      * Compare current instance with another valueObject.
      *
      * @param $right
+     *
      * @return bool
      */
     public function equalTo($right)

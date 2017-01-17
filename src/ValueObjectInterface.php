@@ -1,8 +1,9 @@
 <?php
 /**
- * Plab\ValueObject
+ * Plab\ValueObject.
  */
 namespace Plab\ValueObject;
+
 /**
  * Interface \Plab\ValueObject\ValueObjectInterface.
  *
@@ -18,6 +19,7 @@ interface ValueObjectInterface
      *
      * @param ValueObjectInterface $left
      * @param ValueObjectInterface $right
+     *
      * @return bool
      */
     public function equal(ValueObjectInterface $left, ValueObjectInterface $right) : bool;
@@ -26,6 +28,7 @@ interface ValueObjectInterface
      * Compare current instance with another valueObject.
      *
      * @param ValueObjectInterface $object
+     *
      * @return mixed
      */
     public function equalTo(ValueObjectInterface $object) : bool;

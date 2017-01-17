@@ -1,33 +1,39 @@
 <?php
-declare(strict_types=1);
+
+declare (strict_types=1);
 
 namespace Plab\ValueObject\Measure;
 
 use Plab\ValueObject\ValueObject;
 
+/**
+ * Class Length.
+ */
 final class Length extends ValueObject
 {
     protected $unit;
     protected $value;
 
-    const units = [
-        'meter'      => 1,
-        'decimetre'  => 0.1,
+    const UNITS = [
+        'meter' => 1,
+        'decimetre' => 0.1,
         'centimeter' => 0.01,
         'millimeter' => 0.001,
     ];
 
-    const symbol = [
-        'meter'      => 'm',
-        'decimetre'  => 'dm',
+    const SYMBOL = [
+        'meter' => 'm',
+        'decimetre' => 'dm',
         'centimeter' => 'cm',
         'millimeter' => 'mm',
     ];
 
     /**
      * Length constructor.
+     *
      * @param string $unit
-     * @param int $value
+     * @param int    $value
+     *
      * @throws \Exception
      */
     public function __construct(string $unit, int $value)
@@ -36,7 +42,7 @@ final class Length extends ValueObject
             throw new \Exception('Unit specified not supported');
         }
 
-        $this->unit  = $unit;
+        $this->unit = $unit;
         $this->value = $value;
 
         if (0 > $this->value) {
@@ -51,7 +57,7 @@ final class Length extends ValueObject
      */
     public function base() : float
     {
-        return (float)($this->value * static::units[$this->unit]);
+        return (float) ($this->value * static::units[$this->unit]);
     }
 
     /**
@@ -59,6 +65,7 @@ final class Length extends ValueObject
      *
      * @param Length $left
      * @param Length $right
+     *
      * @return bool
      */
     public function equal(Length $left, Length $right) : bool
@@ -70,6 +77,7 @@ final class Length extends ValueObject
      * Compare current instance with another valueObject.
      *
      * @param $right
+     *
      * @return bool
      */
     public function equalTo($right)

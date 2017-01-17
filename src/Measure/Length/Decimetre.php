@@ -5,6 +5,9 @@ namespace Plab\ValueObject\Measure\Length;
 use Plab\ValueObject\Measure\Length;
 use Plab\ValueObject\ValueObject;
 
+/**
+ * Class Decimetre.
+ */
 final class Decimetre extends ValueObject
 {
     /**
@@ -22,6 +25,7 @@ final class Decimetre extends ValueObject
      *
      * @param Length $left
      * @param Length $right
+     *
      * @return bool
      */
     public function equal(ValueObject $left, ValueObject $right) : bool
@@ -33,6 +37,7 @@ final class Decimetre extends ValueObject
      * Compare current instance with another valueObject.
      *
      * @param $right
+     *
      * @return bool
      */
     public function equalTo($right)
