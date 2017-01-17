@@ -1,10 +1,21 @@
 <?php
-
+/**
+ * Plab\ValueObject
+ */
 namespace Plab\ValueObject;
-
+/**
+ * Interface \Plab\ValueObject.
+ *
+ * Abstract class with Immutable access to avoid miss usage.
+ *
+ * @copyright  Copyright © 2017
+ * @license    GPL-3.0
+ */
 abstract class ValueObject
 {
     /**
+     * Getter of instance properties.
+     *
      * @param string $key
      * @return mixed
      * @throws \Exception
@@ -19,6 +30,8 @@ abstract class ValueObject
     }
 
     /**
+     * Disallow setter.
+     *
      * @param $key
      * @param $value
      * @throws \Exception
@@ -27,12 +40,4 @@ abstract class ValueObject
     {
         throw new \Exception('In ValueObject you are not allowed to setup property');
     }
-
-     /**
-     * Compare left and right for equality values
-     * @param ValueObject $left
-     * @param ValueObject $right
-     * @return bool
-     */
-    abstract public function equal(ValueObject $left, ValueObject $right);
 }
