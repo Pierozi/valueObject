@@ -38,7 +38,7 @@ final class Length extends ValueObject
      */
     public function __construct(string $unit, int $value)
     {
-        if (false === array_keys(static::units, $unit)) {
+        if (false === array_keys(static::UNITS, $unit)) {
             throw new \Exception('Unit specified not supported');
         }
 
@@ -57,7 +57,7 @@ final class Length extends ValueObject
      */
     public function base() : float
     {
-        return (float) ($this->value * static::units[$this->unit]);
+        return (float) ($this->value * static::UNITS[$this->unit]);
     }
 
     /**
