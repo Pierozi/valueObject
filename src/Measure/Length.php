@@ -2,17 +2,23 @@
 
 declare (strict_types=1);
 
+/**
+ * Plab\ValueObject.
+ */
 namespace Plab\ValueObject\Measure;
-
-use Plab\ValueObject\ValueObject;
+use Plab\ValueObject\VoGetterTrait;
+use Plab\ValueObject\VoSetterDisallowTrait;
 
 /**
  * Class Length.
  */
-final class Length extends ValueObject
+final class Length
 {
-    protected $unit;
-    protected $value;
+    private $unit;
+    private $value;
+
+    use VoGetterTrait;
+    use VoSetterDisallowTrait;
 
     const UNITS = [
         'meter' => 1,
@@ -42,12 +48,32 @@ final class Length extends ValueObject
             throw new \Exception('Unit specified not supported');
         }
 
-        $this->unit = $unit;
-        $this->value = $value;
-
         if (0 > $this->value) {
             throw new \Exception('Value cannot be negative');
         }
+
+        $this->unit = $unit;
+        $this->value = $value;
+    }
+
+    /**
+     * Getter of unit property.
+     *
+     * @return string
+     */
+    public function getUnit() : string
+    {
+        return $this->unit;
+    }
+
+    /**
+     * Getter of value property.
+     *
+     * @return int
+     */
+    public function getValue() : int
+    {
+        return $this->value;
     }
 
     /**
@@ -80,7 +106,7 @@ final class Length extends ValueObject
      *
      * @return bool
      */
-    public function equalTo($right)
+    public function equalTo(Length $right)
     {
         return $this->equal($this, $right);
     }

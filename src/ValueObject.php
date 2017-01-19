@@ -7,7 +7,7 @@ namespace Plab\ValueObject;
 /**
  * Class ValueObject.
  */
-abstract class ValueObject
+abstract class ValueObject implements ValueObjectInterface
 {
     /**
      * Getter of instance properties.
