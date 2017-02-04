@@ -6,6 +6,7 @@ declare (strict_types=1);
  * Plab\ValueObject.
  */
 namespace Plab\ValueObject\Measure;
+
 use Plab\ValueObject\VoGetterTrait;
 use Plab\ValueObject\VoSetterDisallowTrait;
 

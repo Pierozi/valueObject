@@ -24,4 +24,3 @@ trait VoSetterDisallowTrait
         throw new \Exception('In ValueObject you are not allowed to setup property');
     }
 }
-
