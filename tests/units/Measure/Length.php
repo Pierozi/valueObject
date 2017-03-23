@@ -59,4 +59,22 @@ class Length extends test
             ->isEqualTo(0.1)
         ;
     }
+    
+    public function test__base_nanometer()
+    {
+        $this->newTestedInstance('nanometer', 100000);
+
+        $this
+            ->float($this->testedInstance->base())
+            ->isEqualTo(0.000001)
+        ;
+
+        $this->newTestedInstance('decimetre', 1);
+
+        $this
+            ->float($this->testedInstance->base())
+            ->isEqualTo(0.1)
+        ;
+    }
+
 }

@@ -16,10 +16,10 @@
         "php": ">=7.0"
     },
     "require-dev": {
-        "atoum/atoum": "^2.8",
-        "atoum/stubs": "^2.5",
+        "atoum/atoum": "~3.0.0",
+        "atoum/stubs": "*",
         "psy/psysh": "@stable",
-        "atoum/reports-extension": "^2.3",
+        "atoum/reports-extension": "dev-master",
         "squizlabs/php_codesniffer": "~2.3"
     },
     "autoload": {

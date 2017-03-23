@@ -26,6 +26,8 @@ final class Length
         'decimetre' => 0.1,
         'centimeter' => 0.01,
         'millimeter' => 0.001,
+        'micrometer' => 0.000001,
+        'nanometer' => 0.000000001,
     ];
 
     const SYMBOL = [
@@ -33,6 +35,8 @@ final class Length
         'decimetre' => 'dm',
         'centimeter' => 'cm',
         'millimeter' => 'mm',
+        'micrometer' => 'µm',
+        'nanometer' => 'nm',
     ];
 
     /**
