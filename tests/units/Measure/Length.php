@@ -113,7 +113,7 @@ class Length extends test
     
     public function test__base_nanometer()
     {
-        $this->newTestedInstance('nanometer', 100000000);
+        $this->newTestedInstance('nanometer', 1000000000);
 
         $this
             ->float($this->testedInstance->base())
