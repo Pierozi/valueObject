@@ -59,4 +59,73 @@ class Length extends test
             ->isEqualTo(0.1)
         ;
     }
+
+    public function test__base_centimeter()
+    {
+        $this->newTestedInstance('centimeter', 100);
+
+        $this
+            ->float($this->testedInstance->base())
+            ->isEqualTo(1)
+        ;
+
+        $this->newTestedInstance('centimeter', 1);
+
+        $this
+            ->float($this->testedInstance->base())
+            ->isEqualTo(0.01)
+        ;
+    }
+
+    public function test__base_millimeter()
+    {
+        $this->newTestedInstance('millimeter', 1000);
+
+        $this
+            ->float($this->testedInstance->base())
+            ->isEqualTo(1)
+        ;
+
+        $this->newTestedInstance('millimeter', 1);
+
+        $this
+            ->float($this->testedInstance->base())
+            ->isEqualTo(0.001)
+        ;
+    }
+
+    public function test__base_micrometer()
+    {
+        $this->newTestedInstance('micrometer', 1000000);
+
+        $this
+            ->float($this->testedInstance->base())
+            ->isEqualTo(1)
+        ;
+
+        $this->newTestedInstance('micrometer', 1);
+
+        $this
+            ->float($this->testedInstance->base())
+            ->isEqualTo(0.000001)
+        ;
+    }
+    
+    public function test__base_nanometer()
+    {
+        $this->newTestedInstance('nanometer', 1000000000);
+
+        $this
+            ->float($this->testedInstance->base())
+            ->isEqualTo(1)
+        ;
+
+        $this->newTestedInstance('nanometer', 1);
+
+        $this
+            ->float($this->testedInstance->base())
+            ->isEqualTo(0.000000001)
+        ;
+    }
+
 }
